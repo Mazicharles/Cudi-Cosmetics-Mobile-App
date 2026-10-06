@@ -1,0 +1,40 @@
+export type Product = {
+  id: string;
+  category_id: string;
+  name: string;
+  slug: string;
+  short_description: string;
+  description: string;
+  ingredients: string;
+  how_to_use: string;
+  size_label: string;
+  price_kobo: number;
+  image_url: string;
+  stock: number;
+  created_at: string;
+};
+export type CartItem = { product_id: string; quantity: number };
+export type OrderItem = {
+  product_name: string;
+  unit_price_kobo: number;
+  quantity: number;
+};
+export type Order = {
+  id: string;
+  order_number: number;
+  user_id: string;
+  status: string;
+  subtotal_kobo: number;
+  shipping_kobo: number;
+  total_kobo: number;
+  created_at: string;
+  shipping_name: string;
+  shipping_phone: string;
+  shipping_address1: string;
+  shipping_address2: string;
+  shipping_city: string;
+  shipping_state: string;
+  shipping_postal_code: string;
+  shipping_country: string;
+  order_items: OrderItem[];
+};
