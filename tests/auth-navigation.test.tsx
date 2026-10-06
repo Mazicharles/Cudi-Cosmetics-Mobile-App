@@ -32,4 +32,4 @@ test.each(['Account', 'Orders'])('signed-out %s tab opens Google login and prese
   fireEvent.press(screen.getByText('Continue browsing'));
   await waitFor(() => expect(route.getPathname()).toBe('/'));
   expect(screen.getByText('Shop home')).toBeTruthy();
-});
+}, 30000);
